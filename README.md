@@ -144,6 +144,8 @@ initiad keys add wallet
 
 > Jennie'ye sahip çıkalım.
 
+> [Mint](https://init-ai.testnet.initia.xyz/mint/0xf7b2c7393a82d06f87908dd8dd58378f3fef10e83bcfdf7c5fc22c1a185d5097) yapabilirsiniz bunu da.
+
 ## Validatör kurulumu:
 ```console
 initiad config set client keyring-backend test
