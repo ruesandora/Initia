@@ -27,7 +27,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
-````
+````console
 sudo systemctl daemon-reload
 sudo systemctl enable slinky.service
 sudo systemctl start slinky.service
@@ -42,7 +42,7 @@ make run-oracle-client
 nano config/app.toml
 # içine aşağıdakileri yapıstıralım komple:
 ```
-```
+```console
 ###############################################################################
 ###                                  Oracle                                 ###
 ###############################################################################
