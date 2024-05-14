@@ -9,7 +9,7 @@ make build
 mv build/slinky /usr/local/bin/
 rm -rf build
 ````
-````
+```console
 # bir kerede copy paste
 sudo tee /etc/systemd/system/slinky.service > /dev/null <<EOF
 [Unit]
