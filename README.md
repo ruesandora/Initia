@@ -175,4 +175,6 @@ initiad tx mstaking create-validator \
 
 > Hayırlı olsun, repoyu zamanla güncelleyeceğim ve node görevlerini ekleyeceğim bu repo'ya dosya olarak.
 
-> Oracle görevini birazdan ekliyorum repoya
+## Görevler
+
+> Görev-1: [Oracle](https://github.com/ruesandora/Initia/blob/main/%231-Oracle.md)
