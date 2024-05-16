@@ -34,6 +34,7 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 
 git clone https://github.com/initia-labs/initia.git
 cd initia
+git checkout v0.2.12
 
 # uzun sürer build
 make build
