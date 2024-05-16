@@ -1,4 +1,4 @@
-# Initia
+<h1 align="center">Initia</h1>
 
 > Selamlar Initia Ödüllü Testneti Başladı - Node ve App testneti hakkında yapmanız gerekenleri anlatıyorum adım adım.
 
@@ -6,17 +6,17 @@
 
 > Node içinde görevler olacak Telegramda paylaşacağım
 
-> Not: Repo'yu hızlıca hazıralayıp paylaşıp 1-2 saat içerssinde sık sık update edicem f5 basarsınız.
+> Kurulum sonrası [formu](https://docs.google.com/forms/d/e/1FAIpQLSc09Kl6mXyZHOL12n_6IUA8MCcL6OqzTqsoZn9N8gpptoeU_Q/viewform) doldurmayı unutmayın
 
-> Not2: Repoyu sıfırdan hazırlama mümkünatım yok şu an önemli proje diye bir çok yerden parça parça peer-seed ve snapshot topladım.
+<h1 align="center">Donanım</h1>
 
-## Donanım
 
 ```
 4 CPU - 8 RAM 160 GB SSD
 ```
 
-## Kurulum
+<h1 align="center">Kurulum</h1>
+
 
 * `#`ile başlayan notları es geçmeyin lütfen.
 ```console
@@ -50,7 +50,8 @@ sudo ln -s $HOME/.initia/cosmovisor/current/bin/initiad /usr/local/bin/initiad -
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.5.0
 ```
 
-## Servis dosyası oluşumu ve node başlatma
+<h1 align="center">Node başlatma</h1>
+
 
 ```console
 
@@ -79,7 +80,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable initia.service
 ```
 
-## İnitalize işlemleri
+<h1 align="center">Sync olma</h1>
+
 
 ```console
 
@@ -122,7 +124,8 @@ curl -L https://snapshots.kjnodes.com/initia-testnet/snapshot_latest.tar.lz4 | t
 sudo systemctl start initia.service && sudo journalctl -u initia.service -f --no-hostname -o cat
 ```
 
-## Cüzdan oluşturma ve app
+<h1 align="center">Cüzdan ve token</h1>
+
 
 ```console
 initiad keys add wallet
@@ -134,7 +137,8 @@ initiad keys add wallet
 > https://faucet.testnet.initia.xyz/
 
 
-## App'e giriş
+<h1 align="center">App'e giriş</h1>
+
 
 > https://app.testnet.initia.xyz/xp
 
@@ -154,7 +158,8 @@ initiad keys add wallet
 
 > [Mint](https://init-ai.testnet.initia.xyz/mint/0xf7b2c7393a82d06f87908dd8dd58378f3fef10e83bcfdf7c5fc22c1a185d5097) yapabilirsiniz bunu da.
 
-## Validatör kurulumu:
+<h1 align="center">Validatör kurulumu</h1>
+
 ```console
 initiad config set client keyring-backend test
 
@@ -185,6 +190,6 @@ initiad tx mstaking create-validator \
 
 > Hayırlı olsun, repoyu zamanla güncelleyeceğim ve node görevlerini ekleyeceğim bu repo'ya dosya olarak.
 
-## Görevler
+<h1 align="center">Görevler</h1>
 
 > Görev-1: [Oracle](https://github.com/ruesandora/Initia/blob/main/%231-Oracle.md)
