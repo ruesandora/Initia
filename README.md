@@ -91,8 +91,16 @@ initiad config set client node tcp://localhost:17957
 
 initiad init $MONIKER --chain-id initiation-1
 
-curl -Ls https://snapshots.kjnodes.com/initia-testnet/genesis.json > $HOME/.initia/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/initia-testnet/addrbook.json > $HOME/.initia/config/addrbook.json
+sudo systemctl stop initiad
+
+cp $HOME/.initia/data/priv_validator_state.json $HOME/.initia/priv_validator_state.json.backup
+
+rm -rf $HOME/.initia/data $HOME/.initia/wasmPath
+curl https://testnet-files.itrocket.net/initia/snap_initia.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.initia
+
+mv $HOME/.initia/priv_validator_state.json.backup $HOME/.initia/data/priv_validator_state.json
+
+sudo systemctl restart initiad && sudo journalctl -u initiad -f
 
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@initia-testnet.rpc.kjnodes.com:17959\"|" $HOME/.initia/config/config.toml
 
